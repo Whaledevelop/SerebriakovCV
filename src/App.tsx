@@ -1,121 +1,85 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import avatar from './assets/avatar.jpg'
+import greatEmpireImage from './assets/great-empire.png'
+import content from './content.json'
 import './App.css'
 
+function getProjectImage(image: string, imageKey: string) {
+  if (imageKey === 'greatEmpire') {
+    return greatEmpireImage
+  }
+
+  return image
+}
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [isPortfolioOpen, setIsPortfolioOpen] = useState(false)
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+    <main className={`site ${isPortfolioOpen ? 'site--portfolio-open' : ''}`}>
+      <section className="intro" aria-labelledby="name">
+        <div className="intro__content">
+          <div className="intro__identity">
+            <img className="intro__avatar" src={avatar} alt={content.hero.avatarAlt} />
+            <div className="intro__copy">
+              <p className="intro__eyebrow">{content.hero.eyebrow}</p>
+              <h1 id="name">{content.hero.name}</h1>
+              <p className="intro__role">{content.hero.role}</p>
+            </div>
+          </div>
+          {!isPortfolioOpen && (
+            <button className="intro__action" type="button" onClick={() => setIsPortfolioOpen(true)}>
+              {content.hero.actionLabel}
+            </button>
+          )}
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      {isPortfolioOpen && (
+        <section className="portfolio" aria-label="Проекты">
+          {content.sections.map((section, sectionIndex) => (
+            <section className="portfolio__section" aria-labelledby={section.id} key={section.id}>
+              <div className="portfolio__intro">
+                <h2 id={section.id}>{section.title}</h2>
+                <p>{section.description}</p>
+              </div>
+
+              <div className="portfolio__projects">
+                {section.projects.map((project, projectIndex) => {
+                  const projectImage = getProjectImage(project.image, project.imageKey)
+
+                  return (
+                    <article className={`project-card ${project.imageFit === 'contain' ? 'project-card--logo' : ''}`} style={{ animationDelay: `${(sectionIndex + projectIndex) * 140 + 180}ms` }} key={project.title}>
+                      {projectImage ? (
+                        <img className={`project-card__image ${project.imageFit === 'contain' ? 'project-card__image--contain' : ''}`} src={projectImage} alt={`${content.imageAltPrefix} ${project.title}`} />
+                      ) : (
+                        <div className="project-card__image project-card__image--placeholder" aria-hidden="true">{project.placeholder}</div>
+                      )}
+                      <div className="project-card__content">
+                        <h3>{project.title}</h3>
+                        <p className="project-card__subtitle">{project.subtitle}</p>
+                        {project.downloads && (
+                          <dl className="project-card__stats">
+                            <div>
+                              <dt>{content.downloadsLabel}</dt>
+                              <dd>{project.downloads}</dd>
+                            </div>
+                          </dl>
+                        )}
+                        <p className="project-card__description">{project.description}</p>
+                        {project.link && (
+                          <a href={project.link} target="_blank" rel="noreferrer">{project.linkLabel}</a>
+                        )}
+                      </div>
+                    </article>
+                  )
+                })}
+              </div>
+            </section>
+          ))}
+        </section>
+      )}
+    </main>
   )
 }
 

@@ -1,0 +1,127 @@
+{
+  "hero": {
+    "avatarAlt": "Никита Серебряков",
+    "eyebrow": "Unity Developer",
+    "name": "Никита Серебряков",
+    "role": "Middle+ / Senior / Lead Unity Developer",
+    "actionLabel": "Начать знакомство"
+  },
+  "imageAltPrefix": "Обложка проекта",
+  "downloadsLabel": "Количество скачиваний",
+  "sections": [
+    {
+      "id": "casual-hypercasual",
+      "title": "Casual / HyperCasual\nMobile Games",
+      "description": "Гиперказуальные игры, пазлы и casual RPG со спиннер-механикой.",
+      "projects": [
+        {
+          "title": "Lucky Knight",
+          "subtitle": "QUIZPLEASE",
+          "description": "Казуальная RPG со спиннер-механикой и роглайк-прогрессией. Работа над игрой и её развитием в смешанной RPG / spinner-концепции.",
+          "image": "https://play-lh.googleusercontent.com/4B59dhPmQCE-Oc74fWsP-9HJ-rNfhWbLLZLxVTBS9cjCz1rZIxPjvMMeBDVL6zxjB4dq7b9Dae7s7ez3OBrXkEs=w526-h296-rw",
+          "imageKey": "",
+          "imageFit": "cover",
+          "placeholder": "",
+          "link": "https://play.google.com/store/apps/details?id=com.quizplease.quizheroes",
+          "linkLabel": "Смотреть в Google Play"
+        },
+        {
+          "title": "Break the Dancing Robot",
+          "subtitle": "Tap Empire",
+          "description": "Гиперказуальный проект, разработанный с нуля до релиза в Tap Empire. Быстрый цикл от прототипа к MVP и релизной версии.",
+          "downloads": "1 млн+",
+          "image": "https://play-lh.googleusercontent.com/8-5PT4wkAQkAGsWoxmc4mxQQnHOti-62tj4ACWhyS3_Au7XT52QR_prBXjgSFud0nquLjn5ErkqCanE5qsqqAQ=w600-h1200-rw",
+          "imageKey": "",
+          "imageFit": "cover",
+          "placeholder": "",
+          "link": "https://play.google.com/store/apps/details?id=com.tapempire.dolldance",
+          "linkLabel": "Смотреть в Google Play"
+        },
+        {
+          "title": "Unscrew Tiles Puzzle",
+          "subtitle": "Tap Empire",
+          "description": "Пазл, доведённый до релиза. Для команды подготовил удобный редактор уровней на Odin с шаблонами и хоткеями.",
+          "downloads": "100 тыс.+",
+          "image": "https://play-lh.googleusercontent.com/fsnSR5IgD4q8ZKNf5AzlPuODZb7l4PzqOgTRtAdivWnr62ySU-1ZVQSQ_MkwDm6Ansren4E0lbK1OLmhA798jg=w600-h1200-rw",
+          "imageKey": "",
+          "imageFit": "cover",
+          "placeholder": "",
+          "link": "https://play.google.com/store/apps/details?id=com.tapempire.screwjam",
+          "linkLabel": "Смотреть в Google Play"
+        },
+        {
+          "title": "Unbolt Nuts: Wooden Plank",
+          "subtitle": "Tap Empire",
+          "description": "Ещё один релизный puzzle-проект для мобильных платформ. Интегрировал рекламу и аналитику, поддерживал игровые версии и playable ads.",
+          "downloads": "10 тыс.+",
+          "image": "https://play-lh.googleusercontent.com/1b9L2wnKTmv4r96d5FFvvnpf7GbwPfgc9dXOgrDZayxYWLsqHmKx2zOzFhffOh3nTkTbhypJjF14gEtIBIJLDTU=w600-h1200-rw",
+          "imageKey": "",
+          "imageFit": "cover",
+          "placeholder": "",
+          "link": "https://play.google.com/store/apps/details?id=com.tapempire.woodpuzzle",
+          "linkLabel": "Смотреть в Google Play"
+        },
+        {
+          "title": "Great Empire",
+          "subtitle": "MPGames",
+          "description": "Оптимизировал загрузку UI и устранил фризы. Развивал мета-системы, инструменты для отладки интерфейса и тестирования VFX.",
+          "downloads": "",
+          "image": "",
+          "imageKey": "greatEmpire",
+          "imageFit": "cover",
+          "placeholder": "",
+          "link": "Запись геймплея",
+          "linkLabel": "https://drive.google.com/file/d/1pHCg96LxtqJD-Zn1r257YtpEVNGXlxaJ/view?usp=sharing"
+        }
+      ]
+    },
+    {
+      "id": "desktop-games",
+      "title": "Desktop Games",
+      "description": "Инди-RPG для Steam с мета-геймплеем, системами прокачки и инструментами для команды.",
+      "projects": [
+        {
+          "title": "Immortal Hunters",
+          "subtitle": "Steam indie RPG",
+          "description": "Разработал город, квесты, карту, инвентарь и древо прокачки. Создавал навыки героев и монстров на DOTS / ECS.",
+          "downloads": "",
+          "image": "https://cdn.akamai.steamstatic.com/steam/apps/2336760/header.jpg",
+          "imageKey": "",
+          "imageFit": "cover",
+          "placeholder": "",
+          "link": "https://store.steampowered.com/app/2336760/Immortal_Hunters/",
+          "linkLabel": "Смотреть в Steam"
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "title": "Services",
+      "description": "Внутренние SDK, интеграции и сервисные инструменты для мобильных игр.",
+      "projects": [
+        {
+          "title": "Playgendary",
+          "description": "Создал внутренний плагин для интеграции Huawei AppGallery с рекламой и покупками. Поддерживал продуктовые команды и дорабатывал Ads / IAP плагины.",
+          "downloads": "",
+          "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Playgendary_Logotype.svg",
+          "imageKey": "",
+          "imageFit": "contain",
+          "placeholder": "",
+          "link": "https://playgendary.com/",
+          "linkLabel": "О компании"
+        },
+        {
+          "title": "ИТОРУМ",
+          "description": "Довёл до релиза крупный симулятор для «Алмаз-Антей». Реализовал PHP WebSockets-мультиплеер, участвовал в VR-симуляторе для КамАЗа и руководил Unity-командой.",
+          "downloads": "",
+          "image": "https://itorum.ru/wp-content/themes/itorum/assets/images/logo.svg",
+          "imageKey": "",
+          "imageFit": "contain",
+          "placeholder": "",
+          "link": "https://itorum.ru/",
+          "linkLabel": "О компании"
+        }
+      ]
+    }
+  ]
+}
