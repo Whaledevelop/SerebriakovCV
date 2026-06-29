@@ -1,22 +1,23 @@
 import { useState } from 'react'
 import avatar from './assets/avatar.jpg'
-import greatEmpireImage from './assets/great-empire.png'
 import content from './content.json'
+import ProjectsView from './ProjectsView'
+import SkillsView from './SkillsView'
 import './App.css'
 
-function getProjectImage(image: string, imageKey: string) {
-  if (imageKey === 'greatEmpire') {
-    return greatEmpireImage
-  }
-
-  return image
-}
+type ActiveView = 'projects' | 'skills' | null
 
 function App() {
-  const [isPortfolioOpen, setIsPortfolioOpen] = useState(false)
+  const [activeView, setActiveView] = useState<ActiveView>(null)
+  const isContentOpen = activeView !== null
+
+  function openView(view: ActiveView) {
+    setActiveView(view)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   return (
-    <main className={`site ${isPortfolioOpen ? 'site--portfolio-open' : ''}`}>
+    <main className={`site ${isContentOpen ? 'site--portfolio-open' : ''}`}>
       <section className="intro" aria-labelledby="name">
         <div className="intro__content">
           <div className="intro__identity">
@@ -27,58 +28,19 @@ function App() {
               <p className="intro__role">{content.hero.role}</p>
             </div>
           </div>
-          {!isPortfolioOpen && (
-            <button className="intro__action" type="button" onClick={() => setIsPortfolioOpen(true)}>
+          <div className="intro__actions">
+            <button className={`intro__action ${activeView === 'projects' ? 'intro__action--active' : ''}`} type="button" aria-pressed={activeView === 'projects'} onClick={() => openView('projects')}>
               {content.hero.actionLabel}
             </button>
-          )}
+            <button className={`intro__action intro__action--secondary ${activeView === 'skills' ? 'intro__action--active' : ''}`} type="button" aria-pressed={activeView === 'skills'} onClick={() => openView('skills')}>
+              {content.hero.skillsActionLabel}
+            </button>
+          </div>
         </div>
       </section>
 
-      {isPortfolioOpen && (
-        <section className="portfolio" aria-label="Проекты">
-          {content.sections.map((section, sectionIndex) => (
-            <section className="portfolio__section" aria-labelledby={section.id} key={section.id}>
-              <div className="portfolio__intro">
-                <h2 id={section.id}>{section.title}</h2>
-                <p>{section.description}</p>
-              </div>
-
-              <div className="portfolio__projects">
-                {section.projects.map((project, projectIndex) => {
-                  const projectImage = getProjectImage(project.image, project.imageKey)
-
-                  return (
-                    <article className={`project-card ${project.imageFit === 'contain' ? 'project-card--logo' : ''}`} style={{ animationDelay: `${(sectionIndex + projectIndex) * 140 + 180}ms` }} key={project.title}>
-                      {projectImage ? (
-                        <img className={`project-card__image ${project.imageFit === 'contain' ? 'project-card__image--contain' : ''}`} src={projectImage} alt={`${content.imageAltPrefix} ${project.title}`} />
-                      ) : (
-                        <div className="project-card__image project-card__image--placeholder" aria-hidden="true">{project.placeholder}</div>
-                      )}
-                      <div className="project-card__content">
-                        <h3>{project.title}</h3>
-                        <p className="project-card__subtitle">{project.subtitle}</p>
-                        {project.downloads && (
-                          <dl className="project-card__stats">
-                            <div>
-                              <dt>{content.downloadsLabel}</dt>
-                              <dd>{project.downloads}</dd>
-                            </div>
-                          </dl>
-                        )}
-                        <p className="project-card__description">{project.description}</p>
-                        {project.link && (
-                          <a href={project.link} target="_blank" rel="noreferrer">{project.linkLabel}</a>
-                        )}
-                      </div>
-                    </article>
-                  )
-                })}
-              </div>
-            </section>
-          ))}
-        </section>
-      )}
+      {activeView === 'projects' && <ProjectsView />}
+      {activeView === 'skills' && <SkillsView />}
     </main>
   )
 }

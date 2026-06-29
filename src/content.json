@@ -4,7 +4,8 @@
     "eyebrow": "Unity Developer",
     "name": "Никита Серебряков",
     "role": "Middle+ / Senior / Lead Unity Developer",
-    "actionLabel": "Начать знакомство"
+    "actionLabel": "Projects",
+    "skillsActionLabel": "Skills"
   },
   "imageAltPrefix": "Обложка проекта",
   "downloadsLabel": "Количество скачиваний",
@@ -12,12 +13,12 @@
     {
       "id": "casual-hypercasual",
       "title": "Casual / HyperCasual\nMobile Games",
-      "description": "Гиперказуальные игры, пазлы и casual RPG со спиннер-механикой.",
+      "description": "Гиперказуальные игры, пазлы и casual RPG. С нуля до релиза",
       "projects": [
         {
-          "title": "Lucky Knight",
+          "title": "Lucky Knight / Quiz Hero",
           "subtitle": "QUIZPLEASE",
-          "description": "Казуальная RPG со спиннер-механикой и роглайк-прогрессией. Работа над игрой и её развитием в смешанной RPG / spinner-концепции.",
+          "description": "Казуальная RPG со спиннер-механикой и роглайк-прогрессией. Работа над более ранней версией - смесь квизов и RPG",
           "image": "https://play-lh.googleusercontent.com/4B59dhPmQCE-Oc74fWsP-9HJ-rNfhWbLLZLxVTBS9cjCz1rZIxPjvMMeBDVL6zxjB4dq7b9Dae7s7ez3OBrXkEs=w526-h296-rw",
           "imageKey": "",
           "imageFit": "cover",
@@ -28,7 +29,7 @@
         {
           "title": "Break the Dancing Robot",
           "subtitle": "Tap Empire",
-          "description": "Гиперказуальный проект, разработанный с нуля до релиза в Tap Empire. Быстрый цикл от прототипа к MVP и релизной версии.",
+          "description": "Гиперказуальный проект, оптимизация под playable ads, система быстрой генерацией лвлов",
           "downloads": "1 млн+",
           "image": "https://play-lh.googleusercontent.com/8-5PT4wkAQkAGsWoxmc4mxQQnHOti-62tj4ACWhyS3_Au7XT52QR_prBXjgSFud0nquLjn5ErkqCanE5qsqqAQ=w600-h1200-rw",
           "imageKey": "",
@@ -40,7 +41,7 @@
         {
           "title": "Unscrew Tiles Puzzle",
           "subtitle": "Tap Empire",
-          "description": "Пазл, доведённый до релиза. Для команды подготовил удобный редактор уровней на Odin с шаблонами и хоткеями.",
+          "description": "Гиперказуальный пазл. Удобный редактор уровней на Odin с шаблонами и хоткеями.",
           "downloads": "100 тыс.+",
           "image": "https://play-lh.googleusercontent.com/fsnSR5IgD4q8ZKNf5AzlPuODZb7l4PzqOgTRtAdivWnr62ySU-1ZVQSQ_MkwDm6Ansren4E0lbK1OLmhA798jg=w600-h1200-rw",
           "imageKey": "",
@@ -64,14 +65,14 @@
         {
           "title": "Great Empire",
           "subtitle": "MPGames",
-          "description": "Оптимизировал загрузку UI и устранил фризы. Развивал мета-системы, инструменты для отладки интерфейса и тестирования VFX.",
+          "description": "Развивал мета-системы, инструменты для отладки интерфейса и тестирования VFX. Оптимизировал загрузку UI и устранил фризы",
           "downloads": "",
           "image": "",
           "imageKey": "greatEmpire",
           "imageFit": "cover",
           "placeholder": "",
-          "link": "Запись геймплея",
-          "linkLabel": "https://drive.google.com/file/d/1pHCg96LxtqJD-Zn1r257YtpEVNGXlxaJ/view?usp=sharing"
+          "link": "https://drive.google.com/file/d/1pHCg96LxtqJD-Zn1r257YtpEVNGXlxaJ/view?usp=sharing",
+          "linkLabel": "Запись геймплея"
         }
       ]
     },
@@ -83,7 +84,7 @@
         {
           "title": "Immortal Hunters",
           "subtitle": "Steam indie RPG",
-          "description": "Разработал город, квесты, карту, инвентарь и древо прокачки. Создавал навыки героев и монстров на DOTS / ECS.",
+          "description": "Разработал логику города, квестов, карту, инвентарь и древо прокачки. Сделал нодовый редактор диалогов/квестов с импортом. Создавал навыки героев и монстров на DOTS / ECS.",
           "downloads": "",
           "image": "https://cdn.akamai.steamstatic.com/steam/apps/2336760/header.jpg",
           "imageKey": "",
@@ -123,5 +124,60 @@
         }
       ]
     }
-  ]
+  ],
+  "contact": {
+    "title": "Связаться со мной",
+    "label": "Telegram · @mysli_kraba",
+    "url": "https://t.me/mysli_kraba"
+  },
+  "skillsPage": {
+    "codeTitle": "Демонстрация кода",
+    "codeDescription": "Публичные репозитории с примерами архитектуры и разработки на Unity / C#.",
+    "codeSamples": [
+      {
+        "title": "Whaledevelop/zoo-world",
+        "url": "https://github.com/Whaledevelop/zoo-world"
+      },
+      {
+        "title": "Whaledevelop/DesperateMinds",
+        "url": "https://github.com/Whaledevelop/DesperateMinds"
+      },
+      {
+        "title": "Whaledevelop/Whaledevelop.Module",
+        "url": "https://github.com/Whaledevelop/Whaledevelop.Module"
+      }
+    ],
+    "skillsTitle": "Скиллы",
+    "skillsDescription": "Основной стек и направления, с которыми работал в коммерческих проектах.",
+    "groups": [
+      {
+        "title": "AI & LLM",
+        "items": ["Codex", "Claude Code", "Ollama", "MCP", "Cursor"]
+      },
+      {
+        "title": "Архитектура",
+        "items": ["C#", "SOLID", "DI · Zenject · VContainer", "ECS · DOTS", "MVVM · MVC"]
+      },
+      {
+        "title": "Async",
+        "items": ["UniTask", "UniRx · R3", "Addressables"]
+      },
+      {
+        "title": "Multiplayer",
+        "items": ["Unity Gaming Services · Lobby · Leaderboards · Relay", "Netcode for GameObjects", "WebSocket"]
+      },
+      {
+        "title": "Gameplay и визуал",
+        "items": ["DOTween", "Unity Animator · Spine", "Cinemachine · Timeline", "Shader Graph", "Particles"]
+      },
+      {
+        "title": "Tools и build",
+        "items": ["Odin Inspector", "NodeGraph editors", "Custom editor tools", "Unity Profiler", "CI/CD · Jenkins"]
+      },
+      {
+        "title": "Services и platforms",
+        "items": ["Android · iOS · Windows · WebGL", "AdMob · AppLovin MAX", "Unity IAP", "Firebase · Adjust · AppsFlyer"]
+      }
+    ]
+  }
 }
