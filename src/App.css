@@ -433,6 +433,12 @@
   text-transform: uppercase;
 }
 
+.contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+}
+
 .contact a {
   color: #e7fff8;
   font-size: clamp(1.4rem, 3vw, 2rem);

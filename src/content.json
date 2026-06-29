@@ -128,16 +128,14 @@
   "contact": {
     "title": "Связаться со мной",
     "label": "Telegram · @mysli_kraba",
-    "url": "https://t.me/mysli_kraba"
+    "url": "https://t.me/mysli_kraba",
+    "resumeLabel": "Подробное резюме",
+    "resumeUrl": "https://drive.google.com/file/d/1vIXRjpNhNMV1GD_VjbDf0RgIbBXlhSBx/view?usp=sharing"
   },
   "skillsPage": {
     "codeTitle": "Демонстрация кода",
     "codeDescription": "Публичные репозитории с примерами архитектуры и разработки на Unity / C#.",
     "codeSamples": [
-      {
-        "title": "Whaledevelop/zoo-world",
-        "url": "https://github.com/Whaledevelop/zoo-world"
-      },
       {
         "title": "Whaledevelop/DesperateMinds",
         "url": "https://github.com/Whaledevelop/DesperateMinds"
@@ -145,6 +143,10 @@
       {
         "title": "Whaledevelop/Whaledevelop.Module",
         "url": "https://github.com/Whaledevelop/Whaledevelop.Module"
+      },
+      {
+        "title": "Whaledevelop/zoo-world",
+        "url": "https://github.com/Whaledevelop/zoo-world"
       }
     ],
     "skillsTitle": "Скиллы",
@@ -164,7 +166,7 @@
       },
       {
         "title": "Multiplayer",
-        "items": ["Unity Gaming Services · Lobby · Leaderboards · Relay", "Netcode for GameObjects", "WebSocket"]
+        "items": ["UGS · Lobby · Leaderboards · Relay", "Netcode for GameObjects", "WebSocket"]
       },
       {
         "title": "Gameplay и визуал",
